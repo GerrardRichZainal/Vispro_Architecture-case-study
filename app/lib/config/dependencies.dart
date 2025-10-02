@@ -88,7 +88,9 @@ List<SingleChildWidget> get providersRemote => [
 
 /// Local dependencies
 List<SingleChildWidget> get providersLocal => [
-      ChangeNotifierProvider<AuthRepository>.value(value: AuthRepositoryDev()),
+      ChangeNotifierProvider<AuthRepository>(
+        create: (context) => AuthRepositoryDev(),
+      ),
       Provider<LocalDataService>.value(value: LocalDataService()),
       Provider<DestinationRepository>(
         create: (context) => DestinationRepositoryLocal(

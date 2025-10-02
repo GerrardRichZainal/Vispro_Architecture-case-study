@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../domain/models/activity/activity.dart';
-import '../../../utils/image_error_listener.dart';
+
 import '../../core/ui/custom_checkbox.dart';
 
 class ActivityEntry extends StatelessWidget {

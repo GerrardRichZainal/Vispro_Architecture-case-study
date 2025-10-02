@@ -37,5 +37,12 @@ void main(List<String> args) async {
 
   // Jalankan server
   final server = await serve(handler, ip, port);
-  print('Server listening on port ${server.port}');
+    String line = "Server listening on port ${server.port}";
+  var toZone = printToZone;
+  if (toZone == null) {
+    printToConsole(line);
+  } else {
+    toZone(line);
+  }
+
 }
